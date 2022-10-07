@@ -1,0 +1,15 @@
+[package]
+name = "brainf"
+version = "0.1.0"
+edition = "2021"
+authors = ["Nav <navaneeth.sajiv@gmail.com>"]
+description = "A brainfuck interpreter written in Rust 🦀"
+
+[dependencies]
+anyhow = "1.0.65"
+clap = { version = "4.0.10", features = ["derive"] }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
